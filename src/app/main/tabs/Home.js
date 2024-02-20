@@ -45,6 +45,7 @@ const Home = (props) => {
 
     getProducts();
   }, [selectedCategories]));
+  
   const find = (text) => {
     setSearch(text);
     if (text === '') {
@@ -105,6 +106,8 @@ const Home = (props) => {
             value={search}
           />
         </View>
+
+        
         <View style={styles.listLoai}>
           <ScrollView
             horizontal={true}

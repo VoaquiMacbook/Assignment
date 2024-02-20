@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity, ToastAndroid, Alert } from 'react-native'
+import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity, Alert } from 'react-native'
 import React, { useState, useContext } from 'react'
 import { AppContext } from '../main/AppContext';
 import AxiosInstance from '../helper/AxiosInstance';
@@ -41,14 +41,6 @@ const Login = (props) => {
     
         if (email !== '' && password !== '') {
             setCanLogin(true);
-            ToastAndroid.showWithGravityAndOffset(
-                'Logging in...',
-                ToastAndroid.LONG,
-                ToastAndroid.BOTTOM,
-                25,
-                50,
-            );
-    
             try {
                 const body = {
                     email: email,
